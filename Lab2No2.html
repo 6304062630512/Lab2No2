@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<h1>แบบฟอร์มจองทัวร์</h1>
+<form>
+    <fieldset><legend>ข้อมูลทั่วไป</legend>
+    ชื่อ-สกุล:
+    <br>
+    <input
+        type="text"
+        name="name"
+        placeholder="กรอกชื่อ-สกุล"
+        pattern="[ก-๏]+.[ก-๏]+">*
+    <br>
+
+    Email:
+    <br>
+    <input
+        type="email"
+        id="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">*
+    <br>
+    
+    โทรศัพท์:
+    <br>
+        <input
+        type="tel"
+        name="phone"
+        id="phone"
+        pattern="+66\d{2}-\d{3}-\d{4}"
+        value="+66">*
+    <br>
+
+    ที่อยู่:
+    <br><textarea cols="35" rows="5"></textarea><br>
+
+    รหัสไปรษณีย์:
+    <input size="5"
+        type="text"
+        name="รหัสไปรษณีย์"
+        pattern="\d{5}">
+    <br>
+ 
+    รูปผู้จอง:
+    <input 
+        type="file"
+        id="image"
+        name="image"
+        accept="image/png, image/jpeg">
+    </fieldset><br>
+
+
+
+    <fieldset><legend>ข้อมูลเข้าสู่ระบบ</legend>
+    Username:
+    <br>
+    <input
+        type="text"
+        name="username"
+        pattern="[A-Za-z0-9_]{8,}">
+        <br><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ ตั้งเเต่ 8 ตัวขึ้นไป</i><br>
+
+    Password:
+    <br>
+    <input
+        type="password"
+        name="password"
+        pattern=".{8,}">
+        <br><i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i><br>
+    </fieldset><br>
+
+
+
+    <fieldset><legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+    แพ็คเกจทัวร์:
+    <select name="country"> 
+        <option value="">--select--</option>
+        <option value="korea">เกาหลี</option>
+        <option value="japan">ญี่ปุ่น</option>
+        <option value="france">ฝรั่งเศส</option>
+        <option value="italy">อิตาลี</option>
+        <option value="USA">อเมริกา</option>
+    </select><br>
+
+    วันที่เดินทาง:
+    <input
+        type="date"
+        name="trip start"
+        value="dd-----yyyy"
+        min="2022-01-01"
+        max="2022-31-12"><br>
+
+    จำนวนผู้เดินทาง:
+    <input size="5"
+    type="number"
+    id="number"
+    name="numtraveler"
+    min="1"
+    max="10"><br>
+
+    เน้นการท่องเที่ยวเเบบใด?<br>
+    <input type="checkbox" name="travel" value="shopping">ชอปปิ้ง<br>
+    <input type="checkbox" name="travel" value="natural">ธรรมชาติ<br>
+    <input type="checkbox" name="travel" value="sea">ทะเล<br>
+    </fieldset><br>
+
+    ยอมรับเงื่อนไขเเละข้อตกลง
+    <input type="radio" name="agreement" value="agree">I agree
+    <input type="radio" name="agreement" value="disagree">I disagree
+    <input type="submit" value="จอง">
+
+</form>
+
+</body>
+</html>
